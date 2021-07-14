@@ -1,29 +1,28 @@
 import React, { useRef } from "react";
-
-function IncomeForm({ income, setIncome }) {
+import { useDispatch } from "react-redux";
+import { addIncome } from "../redux/action/incomeAction";
+function IncomeForm() {
+	const dispatch = useDispatch();
 	const desc = useRef(null);
 	const date = useRef(null);
 	const price = useRef(null);
-	const AddIncome = (e) => {
+	const submitIncome = (e) => {
 		e.preventDefault();
 		const d = date.current.value.split("-");
 		const newD = new Date(d[0], d[1], d[2]);
 
-		setIncome([
-			...income,
-			{
-				desc: desc.current.value,
-				price: price.current.value,
-				date: newD.getTime(),
-			},
-		]);
-
+		const newIncome = {
+			desc: desc.current.value,
+			price: price.current.value,
+			date: newD.getTime(),
+		};
+		dispatch(addIncome(newIncome));
 		desc.current.value = "";
 		price.current.value = null;
 		date.current.value = null;
 	};
 	return (
-		<form className='income-form' onSubmit={AddIncome}>
+		<form className='income-form' onSubmit={submitIncome}>
 			<div className='form-inner'>
 				<input
 					type='text'
