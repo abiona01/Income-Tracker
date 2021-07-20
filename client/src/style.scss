@@ -25,8 +25,10 @@ button {
 }
 header {
 	display: flex;
+
 	justify-content: space-between;
 	padding: 15px;
+	width: 100%;
 }
 h1 {
 	color: $grey;
@@ -47,6 +49,7 @@ h1 {
 	display: block;
 	margin: 15px;
 	position: relative;
+	width: 100%;
 	&:after {
 		content: "";
 		position: absolute;
@@ -71,6 +74,8 @@ h1 {
 	position: relative;
 	z-index: 1;
 	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
 	justify-content: center;
 	transition: 0.4s;
 	border-radius: 8px;
@@ -151,6 +156,51 @@ h1 {
 			background: $alert;
 			border-radius: 8px 0px 0px 8px;
 			transition: 0.2s;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	header {
+		width: 80%;
+		padding: 20px 5px 40px;
+	}
+	.income-form {
+		margin: 20px auto;
+	}
+	.total-income {
+		margin-left: 50px;
+		font-size: 18px;
+		padding: 25px 10px;
+	}
+	input {
+		width: 100%;
+		border-radius: 0;
+	}
+	.income-list {
+		padding: 20px 10px;
+		.income-item {
+			padding: 10px 5px;
+			text-align: start;
+			&:hover .remove-item {
+				width: 20px;
+			}
+			.desc {
+				margin-left: 20px;
+			}
+			.price {
+				text-align: center;
+				padding-left: 25px;
+			}
+			.date {
+				text-align: center;
+				padding-right: 20px;
+			}
+			.desc,
+			.price,
+			.date {
+				max-width: 50px;
+			}
 		}
 	}
 }
