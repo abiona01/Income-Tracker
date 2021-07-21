@@ -47,7 +47,6 @@ h1 {
   display: block;
   margin: 15px;
   position: relative;
-  width: 100%;
 }
 .income-form:after {
   content: "";
@@ -72,8 +71,6 @@ h1 {
   position: relative;
   z-index: 1;
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
   transition: 0.4s;
   border-radius: 8px;

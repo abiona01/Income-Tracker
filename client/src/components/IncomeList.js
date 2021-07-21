@@ -21,11 +21,10 @@ function IncomeList() {
 		<div className='income-list'>
 			{loading ? (
 				<>
-					<FadeLoader css={override} size={200} />{" "}
+					<FadeLoader css={override} size={200} />
 				</>
 			) : (
 				<>
-					{" "}
 					{incomes.map((income) => (
 						<IncomeItem
 							key={income._id}
