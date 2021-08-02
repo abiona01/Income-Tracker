@@ -71,6 +71,7 @@ h1 {
   position: relative;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   transition: 0.4s;
   border-radius: 8px;
@@ -86,13 +87,19 @@ h1 {
   flex: 1 1 100%;
 }
 
+.form-inner input[type=number] {
+  flex: 1 1 100%;
+}
+
 .form-inner input[type=date] {
   border-radius: 0px;
+  flex: 1 1 100%;
   min-width: 200px;
 }
 
 .form-inner input[type=submit] {
   border-radius: 0px 8px 8px 0px;
+  flex: 1 1 100%;
   cursor: pointer;
   background-image: linear-gradient(to right, #ffce00 50%, #ffce00 50%, #fe4880);
   background-size: 200%;
@@ -159,10 +166,17 @@ h1 {
     margin: 20px auto;
   }
 
+  .form-inner input[type=text],
+.form-inner input[type=text],
+.form-inner input[type=date],
+.form-inner input[type=submit] {
+    width: 100% !important;
+  }
+
   .total-income {
     margin-left: 50px;
     font-size: 18px;
-    padding: 25px 10px;
+    padding: 25px 15px;
   }
 
   input {
@@ -171,25 +185,27 @@ h1 {
   }
 
   .income-list {
-    padding: 20px 10px;
+    padding: 20px 0;
+    text-align: center;
   }
   .income-list .income-item {
-    padding: 10px 5px;
+    width: 100%;
+    padding: 10px 25px 10px 5px;
     text-align: start;
   }
   .income-list .income-item:hover .remove-item {
     width: 20px;
   }
   .income-list .income-item .desc {
-    margin-left: 20px;
+    margin-left: 18px;
   }
   .income-list .income-item .price {
     text-align: center;
-    padding-left: 25px;
+    padding-left: 12px;
   }
   .income-list .income-item .date {
     text-align: center;
-    padding-right: 20px;
+    padding-right: 65px;
   }
   .income-list .income-item .desc,
 .income-list .income-item .price,
