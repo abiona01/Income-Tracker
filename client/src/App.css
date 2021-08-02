@@ -71,7 +71,6 @@ h1 {
   position: relative;
   z-index: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   transition: 0.4s;
   border-radius: 8px;
@@ -158,12 +157,17 @@ h1 {
 
 @media screen and (max-width: 400px) {
   header {
-    width: 80%;
+    width: 90vw;
     padding: 20px 5px 40px;
+  }
+
+  .form-inner {
+    flex-wrap: wrap;
   }
 
   .income-form {
     margin: 20px auto;
+    width: 90vw;
   }
 
   .form-inner input[type=text],
@@ -179,13 +183,9 @@ h1 {
     padding: 25px 15px;
   }
 
-  input {
-    width: 100%;
-    border-radius: 0;
-  }
-
   .income-list {
     padding: 20px 0;
+    width: 90vw;
     text-align: center;
   }
   .income-list .income-item {
@@ -197,7 +197,7 @@ h1 {
     width: 20px;
   }
   .income-list .income-item .desc {
-    margin-left: 18px;
+    margin-left: 20px;
   }
   .income-list .income-item .price {
     text-align: center;
@@ -205,7 +205,7 @@ h1 {
   }
   .income-list .income-item .date {
     text-align: center;
-    padding-right: 65px;
+    padding-right: 50px;
   }
   .income-list .income-item .desc,
 .income-list .income-item .price,
