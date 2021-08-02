@@ -13,6 +13,7 @@ $secondary: #fe4880;
 }
 body {
 	background-color: $light;
+	overflow: hidden;
 }
 input,
 button {
@@ -162,9 +163,10 @@ h1 {
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
 	header {
 		width: 90vw;
+		margin: 0 auto;
 		padding: 20px 5px 40px;
 	}
 	.form-inner {
@@ -188,7 +190,8 @@ h1 {
 
 	.income-list {
 		padding: 20px 0;
-		width: 90vw;
+		margin: 0 auto;
+		width: 80vw;
 		text-align: center;
 		.income-item {
 			width: 100%;
