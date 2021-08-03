@@ -30,6 +30,7 @@ function IncomeForm() {
 					id='desc'
 					ref={desc}
 					placeholder='Income description'
+					required
 				/>
 				<input
 					type='number'
@@ -37,14 +38,21 @@ function IncomeForm() {
 					id='price'
 					ref={price}
 					placeholder='Price'
+					required
 				/>
 				<input
-					type='date'
+					type='text'
 					name='date'
 					id='date'
 					ref={date}
-					placeholder='Income date...'
+					onFocus={(e) => {
+						e.currentTarget.type = "date";
+					}}
+					onBlur={(e) => (e.currentTarget.type = "text")}
+					placeholder='Date'
+					required
 				/>
+
 				<input type='submit' value='Add Income' />
 			</div>
 		</form>

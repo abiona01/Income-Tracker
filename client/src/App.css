@@ -156,7 +156,35 @@ h1 {
   transition: 0.2s;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+  .form-inner {
+    flex-wrap: wrap;
+  }
+
+  .income-form {
+    margin: 20px auto;
+    width: 90vw;
+  }
+  .income-form:after {
+    background-image: none;
+  }
+
+  .form-inner input[type=text],
+.form-inner input[type=number],
+.form-inner input[type=date],
+.form-inner input[type=submit] {
+    width: 100% !important;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  .form-inner input[type=text],
+.form-inner input[type=number],
+.form-inner input[type=date] {
+    border: 1px solid #888;
+  }
+}
+@media screen and (max-width: 400px) {
   header {
     width: 90vw;
     margin: 0 auto;
@@ -171,12 +199,23 @@ h1 {
     margin: 20px auto;
     width: 90vw;
   }
+  .income-form:after {
+    background-image: none;
+  }
 
   .form-inner input[type=text],
-.form-inner input[type=text],
+.form-inner input[type=number],
 .form-inner input[type=date],
 .form-inner input[type=submit] {
     width: 100% !important;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  .form-inner input[type=text],
+.form-inner input[type=number],
+.form-inner input[type=date] {
+    border: 1px solid #888;
   }
 
   .total-income {
