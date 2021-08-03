@@ -26,10 +26,10 @@ button {
 }
 header {
 	display: flex;
-
+	margin: 0 auto;
 	justify-content: space-between;
-	padding: 15px;
-	width: 100%;
+	padding: 15px 0;
+	width: 70vw;
 }
 h1 {
 	color: $grey;
@@ -48,7 +48,9 @@ h1 {
 
 .income-form {
 	display: block;
-	margin: 15px;
+	margin: 20px auto;
+	width: 70vw;
+
 	position: relative;
 	&:after {
 		content: "";
@@ -58,7 +60,7 @@ h1 {
 		right: 0px;
 		bottom: 0px;
 		z-index: 0;
-		background-image: linear-gradient(to right, $primary, $secondary);
+
 		border-radius: 10px;
 		transition: 0.2s;
 	}
@@ -74,6 +76,7 @@ h1 {
 	position: relative;
 	z-index: 1;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	transition: 0.4s;
 	border-radius: 8px;
@@ -83,21 +86,30 @@ h1 {
 		background-color: #fff;
 	}
 }
-
+.form-inner input[type="text"],
+.form-inner input[type="number"],
+.form-inner input[type="date"],
+.form-inner input[type="submit"] {
+	width: 100% !important;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+.form-inner input[type="text"],
+.form-inner input[type="number"],
+.form-inner input[type="date"] {
+	border: 1px solid $grey;
+}
 .form-inner input[type="text"] {
-	border-radius: 8px 0px 0px 8px;
 	flex: 1 1 100%;
 }
 .form-inner input[type="number"] {
 	flex: 1 1 100%;
 }
 .form-inner input[type="date"] {
-	border-radius: 0px;
 	flex: 1 1 100%;
 	min-width: 200px;
 }
 .form-inner input[type="submit"] {
-	border-radius: 0px 8px 8px 0px;
 	flex: 1 1 100%;
 	cursor: pointer;
 
@@ -121,9 +133,11 @@ h1 {
 	}
 }
 .income-list {
-	padding: 15px;
+	width: 70vw;
+	margin: 0 auto;
 	.income-item {
 		position: relative;
+		width: 100%;
 		padding: 10px 15px;
 		background-color: #fff;
 		border-radius: 8px;
@@ -169,22 +183,6 @@ h1 {
 	.income-form {
 		margin: 20px auto;
 		width: 90vw;
-		&:after {
-			background-image: none;
-		}
-	}
-	.form-inner input[type="text"],
-	.form-inner input[type="number"],
-	.form-inner input[type="date"],
-	.form-inner input[type="submit"] {
-		width: 100% !important;
-		margin-bottom: 15px;
-		border-radius: 10px;
-	}
-	.form-inner input[type="text"],
-	.form-inner input[type="number"],
-	.form-inner input[type="date"] {
-		border: 1px solid $grey;
 	}
 }
 @media screen and (max-width: 400px) {
@@ -199,23 +197,8 @@ h1 {
 	.income-form {
 		margin: 20px auto;
 		width: 90vw;
-		&:after {
-			background-image: none;
-		}
 	}
-	.form-inner input[type="text"],
-	.form-inner input[type="number"],
-	.form-inner input[type="date"],
-	.form-inner input[type="submit"] {
-		width: 100% !important;
-		margin-bottom: 15px;
-		border-radius: 10px;
-	}
-	.form-inner input[type="text"],
-	.form-inner input[type="number"],
-	.form-inner input[type="date"] {
-		border: 1px solid $grey;
-	}
+
 	.total-income {
 		margin-left: 50px;
 		font-size: 18px;
@@ -225,7 +208,7 @@ h1 {
 	.income-list {
 		padding: 20px 0;
 		margin: 0 auto;
-		width: 80vw;
+		width: 90vw;
 		text-align: center;
 		.income-item {
 			width: 100%;
